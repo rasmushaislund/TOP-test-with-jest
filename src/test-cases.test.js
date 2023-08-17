@@ -5,11 +5,12 @@ import {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray,
 } from './test-cases';
 
 // Test-case 1 //
 
-test.skip('first letter is capitalized', () => {
+test('first letter is capitalized', () => {
   expect(capitalize('stringssss')).toMatch(/^[A-Z]/);
 });
 
@@ -17,7 +18,7 @@ test.skip('first letter is capitalized', () => {
 
 // Test-case 2
 
-test.skip('string is reversed', () => {
+test('string is reversed', () => {
   expect(reverseString('reversed')).toMatch('desrever');
 });
 
@@ -25,7 +26,7 @@ test.skip('string is reversed', () => {
 
 // Test-case 3
 
-test.skip('can calculator calculate?', () => {
+test('can calculator calculate?', () => {
   expect(calculator.add(2, 2)).toEqual(4);
   expect(calculator.subtract(2, 8)).toEqual(-6);
   expect(calculator.multiply(3, 5)).toEqual(15);
@@ -54,4 +55,16 @@ test('Caesar cipher encryptor', () => {
   expect(caesarCipher('defend.the-east:wall;of,the-castle', 1)).toMatch(
     'efgfoe uif fbtu xbmm pg uif dbtumf'
   );
+});
+
+// ----------------------------- //
+
+// Test-case 5
+
+test('analyze array and return avg., min., max., and length', () => {
+  const arr = [1, 8, 3, 4, 2, 6];
+  expect(analyzeArray(arr).average).toEqual(4);
+  expect(analyzeArray(arr).min).toEqual(1);
+  expect(analyzeArray(arr).max).toEqual(8);
+  expect(analyzeArray(arr).length).toEqual(6);
 });
