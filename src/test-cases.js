@@ -116,5 +116,3 @@ export function caesarCipher(str, shiftFactor) {
 
   return encryptedString;
 }
-
-caesarCipher('defend.the-east:wall;of,the-castlezzz', 0);
