@@ -1,6 +1,11 @@
 // START //
 
-import { capitalize, reverseString, calculator } from './test-cases';
+import {
+  capitalize,
+  reverseString,
+  calculator,
+  caesarCipher,
+} from './test-cases';
 
 // Test-case 1 //
 
@@ -40,7 +45,7 @@ test('Caesar cipher encryptor', () => {
   // Test for keeping the same case
   expect(caesarCipher('ABCdefg', 2)).toMatch('cdefghi');
 
-  // Test for ignoring spaces
+  // Test for keeping spaces
   expect(caesarCipher('defend the east wall of the castle', 1)).toMatch(
     'efgfoe uif fbtu xbmm pg uif dbtumf'
   );
