@@ -116,3 +116,24 @@ export function caesarCipher(str, shiftFactor) {
 
   return encryptedString;
 }
+
+// ----------------------------------------------------------------------//
+
+// 5. An analyzeArray function that takes an array of numbers and returns an
+// object with the following properties: average, min, max, and length.
+
+export function analyzeArray(arr) {
+  const average = arr.reduce((total, value) => {
+    return total + value / arr.length;
+  }, 0);
+
+  const min = Math.min(...arr);
+
+  const max = Math.max(...arr);
+
+  const length = arr.length;
+
+  return { average, min, max, length };
+}
+
+// END //
